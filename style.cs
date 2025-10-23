@@ -293,3 +293,148 @@ button:hover {
 #startButton:hover, #playAgainButton:hover {
     background-color: #2563eb; /* Darker blue */
 }
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #a8dadc, #457b9d);
+  color: #222;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh; /* Đảm bảo nền phủ toàn bộ trang */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  max-width: 700px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  color: #1d4ed8; /* Màu tiêu đề */
+}
+
+.card {
+  background: #f1f5ff;
+  border: 1px solid #d9e2ff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.choices {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.choices button {
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.choices button:hover {
+  background-color: #d1fae5;
+  color: #065f46;
+  transform: scale(1.05);
+}
+
+.choices button.correct {
+  border-color: #22c55e;
+  background: #ecfdf5;
+  color: #166534;
+  animation: pulse 1s;
+}
+
+.choices button.wrong {
+  border-color: #ef4444;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  color: #555;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.actions button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.actions button.primary {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.actions button.primary:hover {
+  background: #2563eb;
+}
+
+.actions button.secondary {
+  background: #e5e7eb;
+}
+
+.actions button.secondary:hover {
+  background: #d1d5db;
+}
+
+.hidden {
+  display: none;
+}
+
+.progress {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 14px 0;
+}
+
+.bar {
+  height: 100%;
+  width: 0%;
+  background: #3b82f6;
+  transition: width 300ms;
+}
+
+.result {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
